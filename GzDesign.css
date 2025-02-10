@@ -480,22 +480,7 @@ nav.dropdown-con {
     z-index: 1000;
   }
   
-  /* Menu button */
-  .menu-button {
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-    display: none; /* Hide by default, can be shown on mobile */
-  }
-  
-  .menu-button:hover {
-    background-color:black;
-  }
-  
+
   /* Main navigation list */
   nav ul.dropdown {
     list-style: none;
