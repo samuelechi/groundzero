@@ -21,14 +21,6 @@ body{
     overflow-x: hidden;
 }
 
-img{
-    width: 750px;
-    height: auto;
-    margin: 20px;
-    padding: 5px;
-    border-color: goldenrod;
-    background-color: goldenrod;
-}
 div{
     background-color: beige;
     width: 100%;
