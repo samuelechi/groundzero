@@ -1,0 +1,11 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    text-align: center;
+    margin: 20px;
+}
+.key section{
+    top: -10px;
+    position: relative;
+    background-color: antiquewhite;
+}
