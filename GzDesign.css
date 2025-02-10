@@ -1,9 +1,11 @@
 @media (max-width: 768px) {
-    body {
-        font-size: 14px;
-    }
     .menu {
         flex-direction: column;
+    }
+}
+@media (min-width: 768px) {
+    .menu {
+        flex-direction: row;
     }
 }
 body{
