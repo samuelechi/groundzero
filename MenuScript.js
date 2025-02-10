@@ -70,6 +70,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 3000);
     }
 
+    function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "block") ? "none" : "block";
+}
+
     // Load external menu
     const menuPlaceholder = document.getElementById("menu-bar");
     if (menuPlaceholder) {
