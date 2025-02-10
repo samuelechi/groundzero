@@ -97,7 +97,10 @@ td {
 a:hover {
     text-decoration: underline;
 }
-
+img{
+    max-width: 100%;
+    height: auto;
+}
 
 .logo img{
     width: 10%;
