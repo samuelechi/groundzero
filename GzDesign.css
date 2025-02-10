@@ -1,4 +1,4 @@
-@media (max-width: 390px) {
+@media (max-width: 290px) {
 body {
     font-size: 16px;
 }
@@ -6,7 +6,7 @@ body {
         display: block;
     }
 }
-@media (min-width: 391px) {
+@media (min-width: 291px) {
     .menu {
         flex-direction: row;
     }
