@@ -7,7 +7,7 @@
         font-size: 14px;
     }
 }
-@media screen (min-width: 1024px) {
+@media (min-width: 1024px) {
     body {
         font-size: 20px;
         padding: 30px;
