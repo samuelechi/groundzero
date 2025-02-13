@@ -10,8 +10,8 @@ body{
     flex-direction: column;
     max-width: 1440px;
     display: flex;
-    height: 100vh;
-    height: -webkit-fill-available;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
 }
 
 div{
@@ -552,7 +552,7 @@ nav.dropdown-con {
   /* Responsive Styles - Show menu button on small screens */
   @media (max-width: 768px) {
     nav ul.dropdown {
-      display: block;
+      display: inline;
       flex-direction: column;
       align-items: flex-start;
     }
@@ -727,7 +727,7 @@ nav.dropdown-con {
 }
 @supports (-webkit-touch-callout: none) {
     body {
-        background-attachment: scroll;
+        background-attachment: fixed;
     }
 }
     
