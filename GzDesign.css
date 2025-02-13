@@ -487,16 +487,18 @@ nav.dropdown-con {
 /* Main navigation list (horizontal menu) */
 nav ul.dropdown {
     list-style: none; /* Remove default bullets or numbers */
-    display: flex; /* Arranges items horizontally */
-    justify-content: space-around; /* Even space between items */
+    display: flex; /* Flexbox to align items horizontally */
+    justify-content: flex-start; /* Align items to the left */
     align-items: center;
     margin: 0;
     padding: 0;
+    width: 100%; /* Make sure the list takes full width */
 }
 
 /* Main menu items */
 nav ul.dropdown li {
     position: relative;
+    display: inline-block; /* Make each item inline-block to align horizontally */
 }
 
 /* Main menu links */
@@ -557,6 +559,7 @@ nav ul.dropdown li .dropdown-menu li a:hover {
 nav ul.dropdown li:hover > .dropdown-menu {
     display: block;
 }
+
 
 
   /* Responsive Styles - Show menu button on small screens */
