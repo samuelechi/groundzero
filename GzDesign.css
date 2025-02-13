@@ -471,7 +471,7 @@ nav.dropdown-con {
     position: sticky;
     top: 0;
     z-index: 1000;
-    display: ;
+   
   }
   
   /* Menu button */
@@ -559,7 +559,7 @@ nav.dropdown-con {
   /* Responsive Styles - Show menu button on small screens */
   @media (max-width: 768px) {
     nav ul.dropdown {
-      display: none;
+      display: flex;
       flex-direction: column;
       align-items: flex-start;
     }
@@ -703,7 +703,7 @@ nav.dropdown-con {
         padding: 10px; /* Added padding to make navigation items more spaced out */
     }
     .mission div, .vission div, .performance div {
-        padding: 15px; /* Reduced padding */
+        padding: 10px; /* Reduced padding */
     }
     .mission h2, .vission h2, .performance h2 {
         font-size: 28px; /* Reduced font size for mission/vission headings */
@@ -712,7 +712,7 @@ nav.dropdown-con {
         font-size: 16px; /* Reduced font size for paragraphs */
     }
     .performance img {
-        width: 90%; /* Make images smaller on smaller screens */
+        width: 100%; /* Make images smaller on smaller screens */
     }
     .whoweare {
         background-image: url(Glogo.jpeg);
@@ -731,7 +731,7 @@ nav.dropdown-con {
         word-spacing: normal;
     }
     .the-vission {
-        height: 30vh; /* Reduced height for the vision section */
+        height: 20vh; /* Reduced height for the vision section */
     }
 }
 @supports (-webkit-touch-callout: none) {
