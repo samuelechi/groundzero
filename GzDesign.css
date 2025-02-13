@@ -503,7 +503,7 @@ nav.dropdown-con {
   /* Main navigation list */
   nav ul.dropdown {
     list-style: none;
-    display: block;
+    display: grid;
     justify-content: space-around;
     align-items: center;
     margin-top: 0;
