@@ -103,7 +103,7 @@ img{
 
 .logo img{
     width: 60%;
-    height: auto;
+    height: 10vh;
     background-color: goldenrod;
     border: 5px solid goldenrod;
     padding: 0px;
