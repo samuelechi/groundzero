@@ -765,8 +765,8 @@ nav.dropdown-con {
     background-blend-mode: saturation;
     background-position-x: center;
     }
-    .intro {
-         font-size: 16px;
+    .intro p {
+         font-size: 14px;
         word-spacing: normal;
     }
     .the-vission {
