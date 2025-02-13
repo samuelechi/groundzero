@@ -504,7 +504,7 @@ nav.dropdown-con {
     text-decoration: none;
     color: goldenrod;
     padding: 15px 20px;
-    display: flex;
+    display: inline-block;
     font-size: 16px;
     transition: background-color 0.3s ease;
     list-style: none;
@@ -555,7 +555,7 @@ nav.dropdown-con {
   /* Responsive Styles - Show menu button on small screens */
   @media (max-width: 768px) {
     nav ul.dropdown {
-      display: flex;
+      display: inline-block;
       flex-direction: row;
       align-items: flex-start;
     }
