@@ -474,6 +474,7 @@ input[type="submit"]:hover {
 
 .ground-header{
     background-color: azure;
+    align-items: center;
 }
 nav.dropdown-con {
     
@@ -482,6 +483,7 @@ nav.dropdown-con {
     top: 0;
     z-index: 1000;
      background-color:  rgba(2, 41, 28, 0.938);
+    align-items: center;
   }
   
   /* Menu button */
@@ -503,7 +505,7 @@ nav.dropdown-con {
   /* Main navigation list */
   nav ul.dropdown {
     list-style: none;
-    display: grid;
+    display: block;
     justify-content: space-around;
     align-items: center;
     margin-top: 0;
@@ -553,7 +555,7 @@ nav.dropdown-con {
     font-size: 14px;
     background-color: #f9f9f9;
     text-decoration: none;
-    display: block;
+    display: inline;
   }
   
   /* Hover effect for submenu items */
