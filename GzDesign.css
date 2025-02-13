@@ -10,10 +10,7 @@ body{
     flex-direction: column;
     max-width: 1440px;
     display: flex;
-    -webkit-background-size: cover;
-    -webkit-transform: translateZ(0);
-     background-size: cover;
-     background-attachment: scroll;
+ 
 }
 
 div{
