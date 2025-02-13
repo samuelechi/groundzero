@@ -150,7 +150,7 @@ img{
     box-shadow: #333;
     background-blend-mode: saturation;
     background-position-x: center;
-    height: 10vh;
+    height: 20vh;
 }
 .whoweare1{
     background-color:  beige;
@@ -194,6 +194,7 @@ img{
     font-size: 30px;
     font-style: oblique;
     padding-top: 50px;
+     background-color: beige;
 }
 .performance-one{
     background-color:  rgba(2, 41, 28, 0.938);
@@ -755,7 +756,7 @@ nav.dropdown-con {
     }
     .whoweare {
         background-image: url(Glogo2.jpeg);
-        height: 25vh; /* Adjusted height for the whoweare section */
+        height: 15vh; /* Adjusted height for the whoweare section */
     }
     .the-vission {
         height: 30vh; /* Reduced height for the vision section */
