@@ -481,6 +481,7 @@ nav.dropdown-con {
     position: sticky;
     top: 0;
     z-index: 1000;
+     background-color:  rgba(2, 41, 28, 0.938);
   }
   
   /* Menu button */
