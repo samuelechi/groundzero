@@ -475,54 +475,65 @@ input[type="submit"]:hover {
 .ground-header{
     background-color: azure;
 }
-/* Navigation container */
 nav.dropdown-con {
+    
     padding: 15px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: white;
-}
-
-/* Main navigation list (horizontal menu) */
-nav ul.dropdown {
-    list-style: none; /* Remove default bullets or numbers */
-    display: flex; /* Arranges items horizontally */
-    justify-content: space-around; /* Even space between items */
+  }
+  
+  /* Menu button */
+  .menu-button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none; /* Hide by default, can be shown on mobile */
+  }
+  
+  .menu-button:hover {
+    background-color:black;
+  }
+  
+  /* Main navigation list */
+  nav ul.dropdown {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-    margin: 0; /* Remove any margin from the ul */
-    padding: 0; /* Remove any padding from the ul */
-}
-
-/* Main menu items */
-nav ul.dropdown li {
+    margin-top: 0;
+  }
+  
+  nav ul.dropdown li {
     position: relative;
-    margin: 0; /* Remove any default margin on li */
-}
-
-/* Main menu links */
-nav ul.dropdown li a {
+    list-style: none;
+  }
+  
+  nav ul.dropdown li a {
     text-decoration: none;
     color: goldenrod;
     padding: 15px 20px;
-    display: block; /* Ensures full clickable area */
+    display: block;
     font-size: 16px;
     transition: background-color 0.3s ease;
-    border: none; /* Remove any border */
-    background: none; /* Remove any background */
-}
-
-/* Hover effect for main menu items */
-nav ul.dropdown li a:hover {
+    list-style: none;
+  }
+  
+  /* Hover effect for main menu items */
+  nav ul.dropdown li a:hover {
     background-color: beige;
     border-radius: 5px;
-}
-
-/* Dropdown menu (submenu) */
-nav ul.dropdown li .dropdown-menu {
-    display: none; /* Hidden by default */
+  }
+  
+  /* Dropdown menu (submenu) */
+  nav ul.dropdown li > .dropdown-menu {
+    display: none;
     position: absolute;
-    top: 100%; /* Place dropdown below the parent item */
+    top: 100%;
     left: 0;
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
@@ -531,35 +542,29 @@ nav ul.dropdown li .dropdown-menu {
     margin: 0;
     min-width: 200px;
     border-radius: 5px;
-}
-
-/* Submenu items */
-nav ul.dropdown li .dropdown-menu li {
-    width: 100%;
-}
-
-/* Submenu links */
-nav ul.dropdown li .dropdown-menu li a {
+  }
+  
+  /* Submenu list items */
+  nav ul.dropdown li > .dropdown-menu li a {
     color: #333;
     padding: 12px 15px;
     font-size: 14px;
     background-color: #f9f9f9;
     text-decoration: none;
     display: block;
-}
-
-/* Hover effect for submenu items */
-nav ul.dropdown li .dropdown-menu li a:hover {
-    background-color: goldenrod;
+  }
+  
+  /* Hover effect for submenu items */
+  nav ul.dropdown li > .dropdown-menu li a:hover {
+    background-color:   goldenrod;
     color: white;
-}
-
-/* Show dropdown menu when hovering over the parent li */
-nav ul.dropdown li:hover > .dropdown-menu {
+  }
+  
+  /* Show dropdown menu when hovering over parent li */
+  nav ul.dropdown li:hover > .dropdown-menu {
     display: block;
-}
-
-
+  }
+  
 
 
   /* Responsive Styles - Show menu button on small screens */
