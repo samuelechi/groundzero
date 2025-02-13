@@ -688,6 +688,14 @@ nav.dropdown-con {
 @media (max-width: 768px) {
     body {
         overflow-x: hidden;
+    }
+    img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+        margin: 0;
+    }
     h1 {
         font-size: 28px; /* Smaller font size for h1 */
     }
