@@ -251,16 +251,15 @@ img{
     
 }
 .mission div{
-    margin: 0 auto;
-    padding: 10px;
-    max-width: 800px;
-    background-color:rgba(2, 41, 28, 0.938);
-    height: 30vh;
+ background-color: rgba(2, 41, 28, 0.938);
+   margin: 0 auto;
+   max-width: 800px;
+   padding: 10px;
     
 }
 .mission h2{
 
-    font-size: 24px;
+font-size: 24px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     letter-spacing: 2px;
@@ -271,7 +270,7 @@ img{
     background-color: white;
 }
 .mission p{
-    font-size: 14px;
+       font-size: 14px;
     text-align: left;
     height: auto;
     background-color: white;
@@ -488,7 +487,7 @@ nav.dropdown-con {
   /* Main navigation list */
   nav ul.dropdown {
     list-style: none;
-    display: flex;
+    display: inline;
     justify-content: space-around;
     align-items: center;
     margin-top: 0;
@@ -503,7 +502,7 @@ nav.dropdown-con {
     text-decoration: none;
     color: goldenrod;
     padding: 15px 20px;
-    display: inline;
+    display: block;
     font-size: 16px;
     transition: background-color 0.3s ease;
     list-style: none;
