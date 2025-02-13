@@ -31,7 +31,7 @@ nav ul {
 section{
     background-color: beige;
      max-width: 1200px;
-    margin: auto;
+    margin: 20px;
 }
 li{
    
@@ -555,7 +555,7 @@ nav.dropdown-con {
     font-size: 14px;
     background-color: #f9f9f9;
     text-decoration: none;
-    display: inline;
+    display: flex;
   }
   
   /* Hover effect for submenu items */
