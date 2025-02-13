@@ -487,7 +487,7 @@ nav.dropdown-con {
   /* Main navigation list */
   nav ul.dropdown {
     list-style: none;
-    display: inline;
+    display: flex;
     justify-content: space-around;
     align-items: center;
     margin-top: 0;
@@ -502,7 +502,7 @@ nav.dropdown-con {
     text-decoration: none;
     color: goldenrod;
     padding: 15px 20px;
-    display: block;
+    display: flex;
     font-size: 16px;
     transition: background-color 0.3s ease;
     list-style: none;
