@@ -8,7 +8,8 @@ body{
 }
 
 img{
-    width: 750px;
+    width: 100%;
+    max-width: 100%;
     height: auto;
     margin: 20px;
     padding: 5px;
@@ -691,6 +692,7 @@ nav.dropdown-con {
     }
     img {
         width: 100%;
+        max-width: 100%;
         height: auto;
         object-fit: contain;
         margin: 0;
