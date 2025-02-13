@@ -21,11 +21,13 @@ div{
     border: 1px solid #ccc;
 }
 nav ul {
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px;
     list-style: none;
+     display: flex;
+    flex-direction: column;
+    align-items: center;
 
 }
 section{
@@ -101,7 +103,7 @@ img{
 }
 
 .logo img{
-    width: 10%;
+    width: 60%;
     height: auto;
     background-color: goldenrod;
     border: 5px solid goldenrod;
@@ -141,7 +143,6 @@ img{
 .whoweare{
     background-color:  rgba(2, 41, 28, 0.938);
     background-image: url(Glogo.jpeg);
-    height: 25vh;
     background-size: contain;
     background-repeat: repeat-x;
     align-items: center;
@@ -149,6 +150,7 @@ img{
     box-shadow: #333;
     background-blend-mode: saturation;
     background-position-x: center;
+    height: 20vh;
 }
 .whoweare1{
     background-color:  beige;
@@ -214,7 +216,7 @@ img{
 .perform img{
     background-color: beige;
     border-color: white;
-   width: 45%;
+    width: 100%;
    height: auto;
    border-radius: 10px;
    border: 1px solid rgba(2, 41, 28, 0.938);
@@ -252,14 +254,14 @@ img{
 }
 .mission div{
     margin: 0 auto;
-    padding: 50px;
+    padding: 10px;
     max-width: 800px;
     background-color:rgba(2, 41, 28, 0.938);
     
 }
 .mission h2{
 
-    font-size: 50px;
+    font-size: 24px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     letter-spacing: 2px;
@@ -270,7 +272,7 @@ img{
     background-color: white;
 }
 .mission p{
-    font-size: x-large;
+    font-size: 14px;
     text-align: left;
     height: auto;
     background-color: white;
@@ -288,10 +290,10 @@ img{
     background-color: rgba(2, 41, 28, 0.938);
    margin: 0 auto;
    max-width: 800px;
-   padding: 50px
+   padding: 10px;
 }
 .vission h2{
-    font-size: 50px;
+    font-size: 24px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-style: italic;
     letter-spacing: 2px;
@@ -302,7 +304,7 @@ img{
     background-color: white;
 }
 .vission p{
-    font-size: x-large;
+    font-size: 14px;
     text-align: left;
     height: auto;
     background-color: white;
@@ -317,7 +319,7 @@ img{
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    height: 50vh;
+     height: 40vh;
 }
 .key{
     margin-top: -5px;
