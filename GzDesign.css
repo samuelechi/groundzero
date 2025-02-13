@@ -555,7 +555,7 @@ nav.dropdown-con {
     font-size: 14px;
     background-color: #f9f9f9;
     text-decoration: none;
-    display: flex;
+    display: block;
   }
   
   /* Hover effect for submenu items */
