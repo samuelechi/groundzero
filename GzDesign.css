@@ -734,7 +734,7 @@ nav.dropdown-con {
         font-size: 20px; /* Smaller font size for h3 */
     }
     .logo img {
-        width: 60%; /* Slightly bigger logo for visibility */
+        width: 20%; /* Slightly bigger logo for visibility */
     }
     nav ul {
         flex-direction: column;
@@ -755,15 +755,19 @@ nav.dropdown-con {
     }
     .whoweare {
         background-image: url(Glogo.jpeg);
-        height: 10vh; /* Adjusted height for the whoweare section */
+        height: 20vh; /* Adjusted height for the whoweare section */
           background-image: url(Glogo.jpeg);
     background-size: contain;
     background-repeat: repeat-x;
     align-items: center;
-    background-position: 3in;
+    background-position: 2in;
     box-shadow: #333;
     background-blend-mode: saturation;
     background-position-x: center;
+    }
+    .intro {
+         font-size: 16px;
+        word-spacing: normal;
     }
     .the-vission {
         height: 30vh; /* Reduced height for the vision section */
