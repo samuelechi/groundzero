@@ -723,39 +723,40 @@ nav.dropdown-con {
 }
 @media (max-width: 768px) {
     h1 {
-        font-size: 36px;
+        font-size: 28px; /* Smaller font size for h1 */
     }
     h2 {
-        font-size: 32px;
+        font-size: 24px; /* Smaller font size for h2 */
     }
     h3 {
-        font-size: 28px;
+        font-size: 20px; /* Smaller font size for h3 */
     }
     .logo img {
-        width: 40%;
+        width: 60%; /* Slightly bigger logo for visibility */
     }
     nav ul {
         flex-direction: column;
         align-items: center;
+        padding: 10px; /* Added padding to make navigation items more spaced out */
     }
     .mission div, .vission div {
-        padding: 20px;
+        padding: 15px; /* Reduced padding */
     }
     .mission h2, .vission h2 {
-        font-size: 36px;
+        font-size: 28px; /* Reduced font size for mission/vission headings */
     }
     .mission p, .vission p {
-        font-size: 18px;
+        font-size: 16px; /* Reduced font size for paragraphs */
     }
     .performance img {
-        width: 80%;
+        width: 90%; /* Make images smaller on smaller screens */
     }
     .whoweare {
         background-image: url(Glogo2.jpeg);
-        height: 20vh;
+        height: 25vh; /* Adjusted height for the whoweare section */
     }
     .the-vission {
-        height: 40vh;
+        height: 30vh; /* Reduced height for the vision section */
     }
 }
 @supports (-webkit-touch-callout: none) {
