@@ -5,7 +5,7 @@ html {
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0 auto;
-    background-color: beige;
+    background-color: rgba(2, 41, 28, 0.938);
     overflow-x: auto;
     flex-direction: column;
  
