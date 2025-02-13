@@ -514,6 +514,7 @@ nav.dropdown-con {
   nav ul.dropdown li {
     position: relative;
     list-style: none;
+       align-items: center;
   }
   
   nav ul.dropdown li a {
