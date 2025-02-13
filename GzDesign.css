@@ -4,6 +4,7 @@ body{
     margin: 0;
     padding: 0;
     background-color: beige;
+    overflow-x: hidden;
 }
 
 img{
@@ -557,7 +558,7 @@ nav.dropdown-con {
   }
   
   /* Responsive Styles - Show menu button on small screens */
-  @media (max-width: 768px) {
+  @media (max-width: 480px) {
     nav ul.dropdown {
       display: flex;
       flex-direction: column;
