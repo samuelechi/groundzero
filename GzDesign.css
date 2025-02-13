@@ -10,8 +10,8 @@ body{
     flex-direction: column;
     max-width: 1440px;
     display: flex;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translate3d(0,0,0);
+    -webkit-background-size: cover;
+    -webkit-transform: translateZ(0);
 }
 
 div{
