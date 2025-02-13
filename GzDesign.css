@@ -102,7 +102,7 @@ img{
 }
 
 .logo img{
-    width: auto;
+    width: 20%;
     height: 10vh;
     background-color: goldenrod;
     border: 5px solid goldenrod;
