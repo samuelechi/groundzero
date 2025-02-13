@@ -690,8 +690,7 @@ nav.dropdown-con {
         overflow-x: hidden;
     }
     img {
-        width: 100%;
-        max-width: 100%;
+        width: 25%;
         height: auto;
         object-fit: contain;
         margin: 0;
