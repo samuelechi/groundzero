@@ -12,6 +12,8 @@ body{
     display: flex;
     -webkit-background-size: cover;
     -webkit-transform: translateZ(0);
+     background-size: cover;
+     background-attachment: scroll;
 }
 
 div{
