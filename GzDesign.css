@@ -487,8 +487,8 @@ nav.dropdown-con {
 /* Main navigation list (horizontal menu) */
 nav ul.dropdown {
     list-style: none;
-    display: flex; /* Arrange items horizontally */
-    justify-content: space-around;
+    display: flex; /* Arranges items horizontally */
+    justify-content: space-around; /* Even space between items */
     align-items: center;
     margin: 0;
     padding: 0;
@@ -517,9 +517,9 @@ nav ul.dropdown li a:hover {
 
 /* Dropdown menu (submenu) */
 nav ul.dropdown li .dropdown-menu {
-    display: none; /* Hide by default */
+    display: none; /* Hidden by default */
     position: absolute;
-    top: 100%; /* Position dropdown below the parent */
+    top: 100%; /* Place dropdown below the parent item */
     left: 0;
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
@@ -555,6 +555,7 @@ nav ul.dropdown li .dropdown-menu li a:hover {
 nav ul.dropdown li:hover > .dropdown-menu {
     display: block;
 }
+
 
   /* Responsive Styles - Show menu button on small screens */
   @media (max-width: 768px) {
