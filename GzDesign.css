@@ -8,7 +8,6 @@ body{
     background-color: beige;
     overflow-x: auto;
     flex-direction: column;
-    display: flex;
  
 }
 
@@ -504,7 +503,7 @@ nav.dropdown-con {
     text-decoration: none;
     color: goldenrod;
     padding: 15px 20px;
-    display: flex;
+    display: inline;
     font-size: 16px;
     transition: background-color 0.3s ease;
     list-style: none;
