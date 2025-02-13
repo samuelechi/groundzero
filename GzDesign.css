@@ -686,6 +686,8 @@ nav.dropdown-con {
   }
 
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
     h1 {
         font-size: 28px; /* Smaller font size for h1 */
     }
