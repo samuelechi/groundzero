@@ -692,20 +692,29 @@ nav.dropdown-con {
         overflow-x: hidden;
     }
     img {
-        width: 100%;
-        max-width: 100%;
+        width: 100vw;
         height: auto;
         object-fit: contain;
         margin: 0;
     }
     h1 {
-        font-size: 28px; /* Smaller font size for h1 */
+        font-size: 2rem; /* Smaller font size for h1 */
     }
     h2 {
-        font-size: 24px; /* Smaller font size for h2 */
+        font-size: 1.5rem; /* Smaller font size for h2 */
     }
     h3 {
-        font-size: 20px; /* Smaller font size for h3 */
+        font-size: 1.2rem; /* Smaller font size for h3 */
+    }
+    p {
+        font-size: 14px; /* Smaller font size for paragraphs */
+        text-align: left;
+    }
+    figcaption {
+        font-size: 1rem; /* Smaller font size for figcaption */
+        padding: 5px;
+        margin: 1rem auto;
+        font-weight: 600;
     }
     .logo img {
         width: 20%; /* Slightly bigger logo for visibility */
@@ -719,14 +728,39 @@ nav.dropdown-con {
         padding: 10px; /* Reduced padding */
     }
     .mission h2, .vission h2, .performance h2 {
-        font-size: 28px; /* Reduced font size for mission/vission headings */
+        font-size: 1.5rem; /* Reduced font size for mission/vission headings */
+        align-content: center;
     }
     .mission p, .vission p, .performance p {
         font-size: 16px; /* Reduced font size for paragraphs */
+        line-height: 1.5; /* Adjusted line height for better readability */
+        text-align: left;
     }
-    .performance img {
+    .perform img {
         width: 100%; /* Make images smaller on smaller screens */
     }
+   .key, .core, .objective {
+        padding: 10px; /* Reduced padding for key/core/objective sections */
+    }
+    .key h2, .core h2, .objective h2 {
+        font-size: 1.5rem; /* Reduced font size for key/core/objective headings */
+        text-align: center;
+    }
+    .key p, .key li, .core p, .objective p, .objective li {
+        font-size: 16px; /* Reduced font size for key/core/objective paragraphs */
+        line-height: 1.5; /* Adjusted line height for better readability */
+        text-align: left; /* Adjusted text alignment for better readability */
+    }
+    .contact h2 {
+        font-size: 1.5rem; /* Reduced font size for contact heading */
+        text-align: center;
+    }
+    .contact p {
+        font-size: 14px; /* Reduced font size for contact paragraphs */
+        line-height: 1.5;
+        text-align: left; /* Adjusted line height for better readability */
+    }
+
     .whoweare {
         background-image: url(Glogo.jpeg);
         height: 20vh; /* Adjusted height for the whoweare section */
@@ -739,13 +773,80 @@ nav.dropdown-con {
     background-blend-mode: saturation;
     background-position-x: center;
     }
-    .intro p {
-         font-size: 14px;
-        word-spacing: normal;
+   .intro p{
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left; /* Adjusted text alignment for better readability */
+    word-spacing: normal;
+   }
+   .option-link{
+    color: goldenrod;
+    background-color: darkred;
+    padding: 10px;
+    border-radius: 10%;
+    border: 1px solid goldenrod;
+    box-shadow: darkred 0px 0px 10px;
+    font-size: .9rem;
+   }
+    .option-link:hover{
+        color: darkred;
+        background-color: goldenrod;
+        box-shadow: goldenrod 0px 0px 10px;
     }
     .the-vission {
-        height: 20vh; /* Reduced height for the vision section */
+        height: 50vh; /* Reduced height for the vision section */
     }
+    .image-container {
+     
+        
+    grid-template-columns: repeat(2, 2fr); /* 2 columns */
+     display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+
+
+    }
+    .image-container img {
+        width: 100%;
+        height: auto;
+        max-width: 100%; /* Ensure images fit within their container */
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        margin-bottom: 1rem;
+    }
+    .service-link {
+        display: block;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        
+    }
+ .service-link a{
+    color: goldenrod;
+   
+    border-radius: 10%;
+    margin: 1rem;
+    background-color: rgba(2, 41, 28, 0.938);
+    font-size: .9rem;
+}
+.service-link a:hover {
+    color: darkred;
+    background-color: goldenrod;
+    box-shadow: goldenrod 0px 0px 10px;
+}
+    .service-link span {
+        font-size: 1rem; /* Adjusted font size for service text */
+    }
+    .service-design{
+        text-decoration: underline;
+    }
+
+  
 }
 @supports (-webkit-touch-callout: none) {
     body {
