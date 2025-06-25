@@ -921,12 +921,29 @@ figure img:hover {
         text-decoration: underline;
     }
 
-  
-}
-@supports (-webkit-touch-callout: none) {
-    body {
-        background-attachment: fixed;
+  .the-mission {
+        position: relative;
+        height: 50vh;
+        overflow: hidden;
+        color: white; /* For content visibility */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .the-mission::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('images/Gzmission4.jpeg'); /* Adjust path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
     }
 }
+
   
 
