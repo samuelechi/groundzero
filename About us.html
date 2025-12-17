@@ -4,74 +4,76 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | GroundZero Engineering</title>
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&family=Georgia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="GzDesign.css">
 </head>
 <body>
+
     <header id="menu-bar"></header>
 
     <main>
-        <section class="hero" style="height: 50vh; background-image: url('Gpic1.jpeg');">
+        <section class="hero" style="height: 60vh;">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-3"></div>
+            
             <div class="hero-content">
-                <h1>About Us</h1>
-                <h2>Building the Future with Integrity</h2>
+                <h1 class="static-title" style="font-size: 3.5rem;">About <span style="color:#00d26a;">Us</span></h1>
+                <p style="color: #cfb53b; font-size: 1.2rem; letter-spacing: 2px; margin-top: 10px;">
+                    Building the Future with Integrity & Precision
+                </p>
             </div>
         </section>
 
         <section>
             <div class="grid-2">
                 <div>
-                    <h2 class="section-title" style="text-align:left;">Who We Are</h2>
-                    <p><strong>Ground Zero Engineering Ltd</strong> is a premier Engineering, Procurement, and Construction (EPC) company. We are dedicated to providing cutting-edge, specialized services in diverse engineering sectors.</p>
-                    <br>
-                    <p>At the heart of our company is a passion for sustainable development. We specialize in innovative solutions for complex challenges, particularly in oil and gas storage facilities, pipelines, and structural fabrications.</p>
+                    <h2 class="section-title" style="text-align: left;">Our <span style="color:#00d26a;">Story</span></h2>
+                    <p style="margin-bottom: 20px; color: #a0aec0;">
+                        <strong>Ground Zero Engineering Ltd</strong> is a premier Engineering, Procurement, and Construction (EPC) company. We are dedicated to providing cutting-edge, specialized services in diverse engineering sectors.
+                    </p>
+                    <p style="color: #a0aec0;">
+                        At the heart of our company is a passion for sustainable development. We specialize in innovative solutions for complex challenges, particularly in oil and gas storage facilities, pipelines, and structural fabrications.
+                    </p>
                 </div>
                 <div>
-                    <img src="Glogo.jpeg" alt="Ground Zero Logo" style="box-shadow: var(--shadow); border-radius: 10px;">
+                    <img src="Glogo.jpeg" alt="Ground Zero Logo" style="max-width: 300px; margin: 0 auto; border-radius: 50%; border: 2px solid #00d26a; box-shadow: 0 0 40px rgba(0,210,106,0.2);">
                 </div>
             </div>
         </section>
 
-        <section style="background: var(--light-gray);">
-            <h2 class="section-title">Why Choose Us?</h2>
+        <section style="background: rgba(255,255,255,0.02);">
+            <h2 class="section-title">Why Choose <span style="color:#00d26a;">GroundZero?</span></h2>
             <div class="grid-3">
                 <div class="card">
-                    <h3>Experience & Expertise</h3>
-                    <p>Decades of experience allowing us to take on complex, large-scale projects with confidence.</p>
+                    <h3 style="color: #00d26a;">Experience</h3>
+                    <p>Decades of engineering expertise allowing us to take on complex, large-scale projects with confidence.</p>
                 </div>
                 <div class="card">
-                    <h3>Customer-Centric</h3>
-                    <p>We tailor every solution to fit your unique needs, ensuring total satisfaction.</p>
+                    <h3 style="color: #00d26a;">Client-Centric</h3>
+                    <p>We tailor every solution to fit your unique needs, ensuring total satisfaction from concept to completion.</p>
                 </div>
                 <div class="card">
-                    <h3>Sustainability</h3>
+                    <h3 style="color: #00d26a;">Sustainability</h3>
                     <p>We incorporate eco-friendly practices to preserve the environment for future generations.</p>
                 </div>
                 <div class="card">
-                    <h3>Quality Assurance</h3>
-                    <p>Our rigorous QC program ensures every project meets international safety standards.</p>
+                    <h3 style="color: #00d26a;">Safety First</h3>
+                    <p>Rigorous Quality Control programs ensuring international safety standards are met on every site.</p>
                 </div>
                 <div class="card">
-                    <h3>Innovation</h3>
-                    <p>We utilize the latest technology and simulation tools for efficient, modern results.</p>
+                    <h3 style="color: #00d26a;">Innovation</h3>
+                    <p>Utilizing the latest simulation tools and modern engineering software for precision results.</p>
                 </div>
                 <div class="card">
-                    <h3>Proven Track Record</h3>
+                    <h3 style="color: #00d26a;">Proven Track Record</h3>
                     <p>A history of successful completions for notable clients like Golden Oil and Mainland Oil.</p>
                 </div>
             </div>
         </section>
-
-        <section>
-            <h2 class="section-title">The Future of Ground Zero</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto;">
-                As we continue to grow, Ground Zero Engineering Ltd is committed to leading the EPC industry. Our focus remains on providing innovative solutions, ensuring sustainable practices, and enhancing the quality of life for the communities we serve.
-            </p>
-        </section>
     </main>
 
     <footer id="contact-bar" class="service-footer"></footer>
-
+    
     <div class="chat-widget">
         <button id="chat-toggle" class="chat-button">💬</button>
         <div id="chat-window" class="chat-window">
@@ -80,7 +82,7 @@
                 <span style="cursor:pointer;" onclick="document.getElementById('chat-window').style.display='none'">✕</span>
             </div>
             <div id="chat-body" class="chat-body">
-                <div class="message bot-msg">Hello! Do you have questions about our company history?</div>
+                <div class="message bot-msg">Questions about our company history?</div>
             </div>
             <div class="chat-input-area">
                 <input type="text" id="chat-input" placeholder="Type a message...">
