@@ -1,23 +1,148 @@
-<div class="footer-grid">
-    <div class="footer-col">
-        <h3>GroundZero Engineering</h3>
-        <p> Delivering tailored EPC solutions for oil, gas, and structural projects across Nigeria.</p>
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+        
+        <div class="contact-info">
+            <h2 class="section-title" style="text-align: left; margin-bottom: 30px;">
+                Start Your <span style="color:#00d26a;">Project</span>
+            </h2>
+            <p style="color: #a0aec0; margin-bottom: 40px;">
+                Ready to build something iconic? Our engineers are ready to analyze your requirements and provide a tailored EPC solution.
+            </p>
+            
+            <div class="info-item">
+                <div class="icon">📍</div>
+                <div>
+                    <h4>Headquarters</h4>
+                    <p>No 71A Gold Drive, Raji Rasaki Estate, Amuwo, Lagos</p>
+                </div>
+            </div>
+            
+            <div class="info-item">
+                <div class="icon">📞</div>
+                <div>
+                    <h4>Phone</h4>
+                    <p>+234 (803)-352-2992</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <div class="icon">✉️</div>
+                <div>
+                    <h4>Email</h4>
+                    <p>groundzeroengineering455@gmail.com</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+            <form class="glass-form" action="/submit-form" method="post">
+                <h3 style="margin-bottom: 20px; color: white;">Send a Message</h3>
+                
+                <div class="input-group">
+                    <input type="text" name="name" placeholder=" " required>
+                    <label>Full Name</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" name="email" placeholder=" " required>
+                    <label>Email Address</label>
+                </div>
+
+                <div class="input-group">
+                    <textarea name="message" rows="4" placeholder=" " required></textarea>
+                    <label>Project Details...</label>
+                </div>
+
+                <button type="submit" class="btn-glow">Send Message ➤</button>
+            </form>
+        </div>
+
     </div>
-    <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Services.html">Services</a></li>
-            <li><a href="Project.html">Projects</a></li>
-        </ul>
-    </div>
-    <div class="footer-col">
-        <h3>Contact</h3>
-        <p>📍 No 71A Gold Drive, Raji Rasaki Estate, Lagos</p>
-        <p>📞 +234 (803)-352-2992</p>
-        <p>✉️ groundzeroengineering455@gmail.com</p>
-    </div>
-</div>
-<div class="footer-bottom">
-    <p>&copy; 2025 Groundzero Engineering Ltd. All Rights Reserved.</p>
-</div>
+</section>
+
+<style>
+    .contact-section {
+        background: #05080a; /* Darker than body */
+        padding: 80px 20px;
+        position: relative;
+    }
+    .contact-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .info-item {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 30px;
+        align-items: center;
+    }
+    .icon {
+        width: 50px; height: 50px;
+        background: rgba(0, 210, 106, 0.1);
+        color: #00d26a;
+        display: flex; align-items: center; justify-content: center;
+        border-radius: 50%;
+        font-size: 1.5rem;
+    }
+    /* Glass Form Styling */
+    .glass-form {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(15px);
+        padding: 40px;
+        border-radius: 20px;
+        border: 1px solid rgba(255,255,255,0.1);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+    .input-group { position: relative; margin-bottom: 25px; }
+    .input-group input, .input-group textarea {
+        width: 100%;
+        background: rgba(0,0,0,0.3);
+        border: 1px solid #333;
+        padding: 15px;
+        color: white;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: 0.3s;
+    }
+    .input-group input:focus, .input-group textarea:focus {
+        border-color: #00d26a;
+        box-shadow: 0 0 10px rgba(0, 210, 106, 0.2);
+    }
+    /* Floating Label Effect */
+    .input-group label {
+        position: absolute; left: 15px; top: 15px;
+        color: #aaa; pointer-events: none; transition: 0.3s;
+        font-size: 0.9rem;
+    }
+    .input-group input:focus ~ label,
+    .input-group input:not(:placeholder-shown) ~ label,
+    .input-group textarea:focus ~ label,
+    .input-group textarea:not(:placeholder-shown) ~ label {
+        top: -10px; left: 10px; font-size: 0.75rem;
+        background: #00d26a; color: black; padding: 2px 8px; border-radius: 4px; font-weight: bold;
+    }
+    .btn-glow {
+        width: 100%;
+        padding: 15px;
+        background: #00d26a;
+        color: #000;
+        font-weight: 900;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        text-transform: uppercase;
+        transition: 0.3s;
+    }
+    .btn-glow:hover {
+        background: white;
+        box-shadow: 0 0 20px #00d26a;
+    }
+    @media (max-width: 768px) {
+        .contact-container { grid-template-columns: 1fr; }
+    }
+</style>
