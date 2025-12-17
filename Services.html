@@ -4,99 +4,87 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | GroundZero Engineering</title>
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&family=Georgia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="GzDesign.css">
 </head>
 <body>
+
     <header id="menu-bar"></header>
 
     <main>
-        <section class="hero" style="height: 40vh; background-image: url('Gpic3.jpg');">
+        <section class="hero" style="height: 60vh;">
+            <div class="shape shape-2"></div>
             <div class="hero-content">
-                <h1>Our Services</h1>
-                <h2>Comprehensive Solutions from Concept to Completion</h2>
+                <h1 class="static-title" style="font-size: 3.5rem;">Our <span style="color:#00d26a;">Services</span></h1>
+                <p style="color: #cfb53b; font-size: 1.2rem; letter-spacing: 2px; margin-top: 10px;">
+                    Comprehensive Solutions from Concept to Completion
+                </p>
             </div>
         </section>
 
-        <section style="text-align: center; padding-bottom: 20px;">
-            <p style="margin-bottom: 20px;">Quick Jump To:</p>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
-                <a href="#service-engineer" class="btn-gold">Engineering</a>
-                <a href="#service-procurement" class="btn-gold">Procurement</a>
-                <a href="#service-construction" class="btn-gold">Construction</a>
-                <a href="#storage-service" class="btn-gold">Storage</a>
+        <section style="padding: 20px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+                <a href="#service-engineer" class="btn-gold" style="font-size: 0.8rem;">Engineering</a>
+                <a href="#service-procurement" class="btn-gold" style="font-size: 0.8rem;">Procurement</a>
+                <a href="#service-construction" class="btn-gold" style="font-size: 0.8rem;">Construction</a>
+                <a href="#storage-service" class="btn-gold" style="font-size: 0.8rem;">Storage</a>
             </div>
         </section>
 
         <section id="service-engineer">
-            <h2 class="section-title">Engineering Services</h2>
+            <h2 class="section-title">Engineering <span style="color:#00d26a;">Excellence</span></h2>
             <div class="grid-2">
                 <div>
-                    <ul>
-                        <li>Cutting-edge design and drafting for industrial projects.</li>
-                        <li>Expert-led FEED (Front-End Engineering Design).</li>
-                        <li>Detailed engineering solutions tailored to requirements.</li>
-                        <li>Project management for seamless execution.</li>
+                    <ul style="color: #a0aec0; list-style: none; line-height: 2.5;">
+                        <li style="border-bottom: 1px solid rgba(255,255,255,0.1);">✅ Cutting-edge design and drafting for industrial projects.</li>
+                        <li style="border-bottom: 1px solid rgba(255,255,255,0.1);">✅ Expert-led FEED (Front-End Engineering Design).</li>
+                        <li style="border-bottom: 1px solid rgba(255,255,255,0.1);">✅ Detailed engineering solutions tailored to requirements.</li>
+                        <li style="border-bottom: 1px solid rgba(255,255,255,0.1);">✅ Project management for seamless execution.</li>
                     </ul>
                 </div>
-                <div><img src="Gpic4.jpg" class="card"></div>
+                <div><img src="Gpic4.jpg" class="card" alt="Engineering"></div>
             </div>
         </section>
 
-        <section id="service-procurement" style="background: var(--light-gray);">
-            <h2 class="section-title">Procurement Services</h2>
-            <div class="grid-2">
-                <div><img src="Gpic2.jpeg" class="card"></div>
-                <div>
-                    <ul>
-                        <li>Strategic material sourcing and supply chain management.</li>
-                        <li>Cost-effective equipment procurement solutions.</li>
-                        <li>Streamlined expediting and logistics for timely delivery.</li>
-                    </ul>
+        <section id="storage-service" style="background: rgba(255,255,255,0.02);">
+            <h2 class="section-title"><span style="color:#cfb53b;">Core</span> Competencies</h2>
+            <div class="grid-3">
+                <div class="card" style="border-color: #cfb53b;">
+                    <h3>Storage Facilities</h3>
+                    <p>Custom tanks for oil, gas, water, and chemicals. Large-scale bulk storage for liquids and solids.</p>
+                </div>
+                <div class="card" style="border-color: #cfb53b;">
+                    <h3>Pipeworks</h3>
+                    <p>Full-service pipeline design, corrosion protection, and precision fabrication.</p>
+                </div>
+                <div class="card" style="border-color: #cfb53b;">
+                    <h3>Pump Stations</h3>
+                    <p>High-performance pump stations with integrated control systems and automation.</p>
                 </div>
             </div>
         </section>
 
         <section id="service-construction">
-            <h2 class="section-title">Construction Services</h2>
-            <p style="text-align: center; margin-bottom: 20px;">End-to-end project execution with precision and expertise.</p>
+            <h2 class="section-title">Construction & <span style="color:#00d26a;">Procurement</span></h2>
             <div class="grid-3">
                 <div class="card">
-                    <h3>Site Management</h3>
-                    <p>On-site leadership through dedicated management teams.</p>
+                    <h3>🚧 Construction</h3>
+                    <p>End-to-end project execution with precision. From site management to final commissioning.</p>
                 </div>
                 <div class="card">
-                    <h3>Commissioning</h3>
-                    <p>Thorough startup services for operational readiness.</p>
+                    <h3>📦 Procurement</h3>
+                    <p>Strategic material sourcing, cost-effective equipment supply, and logistics management.</p>
                 </div>
                 <div class="card">
-                    <h3>Execution</h3>
-                    <p>Precision building and installation services.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="storage-service" style="background: var(--primary); color: white;">
-            <h2 class="section-title" style="color: var(--gold);">Core Competency: Storage & Pumps</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <h3>Storage Facilities</h3>
-                    <p>Custom tanks for oil, gas, water, and chemicals. Large-scale bulk storage for liquids and solids.</p>
-                </div>
-                <div class="card">
-                    <h3>Pipeworks</h3>
-                    <p>Full-service pipeline design, corrosion protection, and precision fabrication.</p>
-                </div>
-                <div class="card">
-                    <h3>Pump Stations</h3>
-                    <p>High-performance pump stations with integrated control systems and automation.</p>
+                    <h3>⚙️ Project Mgmt</h3>
+                    <p>Robust planning, risk management, and rigorous quality control (QA/QC).</p>
                 </div>
             </div>
         </section>
     </main>
 
     <footer id="contact-bar" class="service-footer"></footer>
-
+    
     <div class="chat-widget">
         <button id="chat-toggle" class="chat-button">💬</button>
         <div id="chat-window" class="chat-window">
@@ -105,7 +93,7 @@
                 <span style="cursor:pointer;" onclick="document.getElementById('chat-window').style.display='none'">✕</span>
             </div>
             <div id="chat-body" class="chat-body">
-                <div class="message bot-msg">Need a quote for a storage tank or pipeline?</div>
+                <div class="message bot-msg">Need a quote for a specific service?</div>
             </div>
             <div class="chat-input-area">
                 <input type="text" id="chat-input" placeholder="Type a message...">
@@ -113,7 +101,7 @@
             </div>
         </div>
     </div>
-
+    
     <script src="MenuScript.js"></script>
 </body>
 </html>
