@@ -1,67 +1,88 @@
 document.addEventListener("DOMContentLoaded", function () {
     
-    // 1. INJECT HEADER & FOOTER
+    // --- 1. COMPONENT LOADER (Header/Footer) ---
     function loadComponent(id, file) {
         const element = document.getElementById(id);
         if (element) {
             fetch(file)
-                .then(res => res.text())
+                .then(res => {
+                    if (!res.ok) throw new Error("Failed to load");
+                    return res.text();
+                })
                 .then(data => {
                     element.innerHTML = data;
-                    // Re-initialize menu listeners after injection
-                    if(id === 'menu-bar') initMobileMenu();
+                    if(id === 'menu-bar') initMobileMenu(); // Re-init menu listeners after load
                 })
-                .catch(err => console.error("Error loading " + file, err));
+                .catch(err => console.log(err));
         }
     }
 
     loadComponent("menu-bar", "MenuGz.html");
     loadComponent("contact-bar", "Contact us.html");
 
-    // 2. MOBILE MENU LOGIC
+
+    // --- 2. MOBILE MENU LOGIC (The Fix) ---
     function initMobileMenu() {
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
+        const links = document.querySelectorAll('.nav-links li');
+
         if (hamburger) {
             hamburger.addEventListener('click', () => {
                 navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+                
+                // Animate Links
+                links.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    } else {
+                        link.style.animation = `fadeUp 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
             });
         }
     }
 
-    // 3. SCROLL ANIMATIONS (Intersection Observer)
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = "1";
-                entry.target.style.transform = "translateY(0)";
+    // --- 3. SCROLL EFFECTS (Navbar & Reveal) ---
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (header) {
+            header.style.background = window.scrollY > 50 ? 'rgba(10, 15, 20, 0.98)' : 'rgba(10, 15, 20, 0.85)';
+            header.style.boxShadow = window.scrollY > 50 ? '0 10px 30px rgba(0,0,0,0.5)' : 'none';
+        }
+
+        // Reveal Elements on Scroll
+        const reveals = document.querySelectorAll('.card, .section-title, .grid-2 div');
+        for (let i = 0; i < reveals.length; i++) {
+            let windowHeight = window.innerHeight;
+            let elementTop = reveals[i].getBoundingClientRect().top;
+            let elementVisible = 150;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].style.opacity = "1";
+                reveals[i].style.transform = "translateY(0)";
+            } else {
+                reveals[i].style.opacity = "0";
+                reveals[i].style.transform = "translateY(50px)";
+                reveals[i].style.transition = "all 0.6s ease-out";
             }
-        });
+        }
     });
 
-    // Target all sections for animation
-    document.querySelectorAll('section, .card').forEach((el) => {
-        el.style.opacity = "0";
-        el.style.transform = "translateY(50px)";
-        el.style.transition = "all 0.8s ease-out";
-        observer.observe(el);
-    });
-
-    // 4. CHATBOT LOGIC
+    // --- 4. SMART CHATBOT ---
     const chatBtn = document.getElementById('chat-toggle');
     const chatWindow = document.getElementById('chat-window');
     const sendBtn = document.getElementById('send-btn');
     const chatInput = document.getElementById('chat-input');
     const chatBody = document.getElementById('chat-body');
 
-    // Toggle Window
     if(chatBtn) {
         chatBtn.addEventListener('click', () => {
-            chatWindow.style.display = (chatWindow.style.display === 'flex') ? 'none' : 'flex';
+            const isFlex = chatWindow.style.display === 'flex';
+            chatWindow.style.display = isFlex ? 'none' : 'flex';
         });
     }
 
-    // Send Message
     if(sendBtn) {
         sendBtn.addEventListener('click', handleChat);
         chatInput.addEventListener('keypress', (e) => {
@@ -70,18 +91,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function handleChat() {
-        const text = chatInput.value.trim().toLowerCase();
-        if (text === "") return;
+        const text = chatInput.value.trim();
+        if (!text) return;
 
-        // Add User Message
-        addMessage(chatInput.value, 'user-msg');
+        // 1. User Message
+        addMessage(text, 'user-msg');
         chatInput.value = "";
 
-        // Bot Thinking Delay
+        // 2. Typing Indicator
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'message bot-msg';
+        typingDiv.innerHTML = '<em>Typing...</em>';
+        typingDiv.id = 'typing-indicator';
+        chatBody.appendChild(typingDiv);
+        chatBody.scrollTop = chatBody.scrollHeight;
+
+        // 3. Bot Response Delay
         setTimeout(() => {
-            const reply = getBotResponse(text);
+            document.getElementById('typing-indicator').remove();
+            const reply = getBotResponse(text.toLowerCase());
             addMessage(reply, 'bot-msg');
-        }, 600);
+        }, 1200); // 1.2s delay for realism
     }
 
     function addMessage(text, className) {
@@ -93,11 +123,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function getBotResponse(input) {
-        if (input.includes('hello') || input.includes('hi')) return "Hello! Welcome to GroundZero Engineering. How can I help you today?";
-        if (input.includes('service') || input.includes('do')) return "We specialize in Engineering, Procurement, and Construction (EPC) for Oil & Gas storage, pipelines, and civil structures.";
-        if (input.includes('contact') || input.includes('phone') || input.includes('email')) return "You can reach us at +234 (803)-352-2992 or email groundzeroengineering455@gmail.com.";
-        if (input.includes('location') || input.includes('address')) return "We are located at No 71A Gold Drive Raji Rasaki Estate, Amuwo, Lagos State.";
-        if (input.includes('quote') || input.includes('price')) return "For a project quote, please use the contact form on our website or email us your project details.";
-        return "I'm not sure about that, but our team can help! Please click 'Contact Us' in the menu.";
+        if (input.includes('hello') || input.includes('hi')) return "Welcome to GroundZero! 👋 I'm your engineering assistant. How can I help with your project today?";
+        if (input.includes('price') || input.includes('quote') || input.includes('cost')) return "Since every project is unique, we'd love to give you a custom quote. Could you leave your email so our team can contact you?";
+        if (input.includes('service') || input.includes('do')) return "We specialize in EPC: Engineering design, Procurement, and Construction of oil/gas storage and civil infrastructure.";
+        if (input.includes('contact') || input.includes('phone')) return "You can call us directly at +234 (803)-352-2992 or visit our Lagos office.";
+        return "I'm taking note of that. Would you like to speak to a human engineer? Click the 'Contact' button above.";
     }
 });
