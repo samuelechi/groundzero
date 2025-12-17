@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&family=Open+Sans:wght@400;600&display=swap');
 
 :root {
-    --bg-dark: #0a0f14;       
+    --bg-dark: #05080a;       
     --bg-card: #151b24;       
-    --accent: #00d26a;        
+    --accent: #00d26a;   /* Neon Green */     
     --gold: #cfb53b;          
     --text-main: #ffffff;
     --text-muted: #a0aec0;
@@ -30,8 +30,8 @@ a { text-decoration: none; color: inherit; transition: 0.3s ease; }
 /* --- 3. MODERN NAVBAR --- */
 header {
     position: fixed; top: 0; left: 0; width: 100%; height: var(--nav-height);
-    z-index: 1000; background: rgba(10, 15, 20, 0.9); backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 1000; background: rgba(5, 8, 10, 0.9); backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 .navbar {
     display: flex; justify-content: space-between; align-items: center;
@@ -50,7 +50,7 @@ header {
     background: var(--accent); color: var(--bg-dark) !important; box-shadow: 0 0 20px rgba(0, 210, 106, 0.4);
 }
 
-/* --- 4. HERO SECTION (FIXED & STABLE) --- */
+/* --- 4. HERO SECTION (GRADIENT & SHAPES) --- */
 .hero {
     position: relative;
     height: 100vh;
@@ -58,57 +58,93 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* BACKGROUND IMAGE MOVED HERE */
-    background-image: url('https://images.unsplash.com/photo-1535063404286-a32050e32f5f?q=80&w=1920&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     overflow: hidden;
+    /* NEW GRADIENT BACKGROUND */
+    background: radial-gradient(circle at center, #0f241d 0%, #000000 100%);
 }
-/* Overlay */
-.hero::before {
-    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(2, 41, 28, 0.8) 100%);
-    z-index: 1;
-}
+
 .hero-content {
-    position: relative; z-index: 2; width: 100%; max-width: 1400px;
+    position: relative; z-index: 10; width: 100%; max-width: 1400px;
     display: flex; flex-direction: column; align-items: center;
 }
 
-/* --- HERO ANIMATIONS --- */
+/* --- CSS ANIMATED SHAPES (The Cool Objects) --- */
+.shape {
+    position: absolute;
+    filter: blur(80px); /* Creates the glowing orb effect */
+    z-index: 1;
+    opacity: 0.6;
+    animation: float 10s infinite alternate;
+}
+
+.shape-1 {
+    top: 10%; left: 10%;
+    width: 300px; height: 300px;
+    background: var(--accent);
+    border-radius: 50%;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    bottom: 20%; right: 10%;
+    width: 400px; height: 400px;
+    background: #004d2e; /* Darker Green */
+    border-radius: 50%;
+    animation-delay: -5s;
+}
+
+.shape-3 {
+    top: 40%; left: 50%;
+    width: 200px; height: 200px;
+    background: var(--gold);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float 15s infinite alternate-reverse;
+}
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(30px, 50px) scale(1.1); }
+}
+
+/* --- HERO TEXT TYPOGRAPHY --- */
+/* Main Title (Fixed, No Slide) */
+.static-title {
+    font-size: 5rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    background: -webkit-linear-gradient(#fff, #a0aec0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Subtitle Wrapper for Sliding */
 .hero-slider-container {
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
     padding: 10px 0;
+    /* Add a slight mask so text fades out at edges */
+    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
 }
 
-.slide-text {
-    display: inline-block;
-    font-size: 4rem;
-    font-weight: 900;
-    color: white;
-    padding-left: 100%; 
-    animation: scrollLeft 20s linear infinite;
-}
-
-.slide-text-reverse {
+.slide-text-gold {
     display: inline-block;
     font-size: 1.5rem;
     color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 2px;
     padding-left: 100%;
-    animation: scrollRight 25s linear infinite;
+    animation: scrollText 20s linear infinite;
 }
 
-@keyframes scrollLeft {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
-}
-@keyframes scrollRight {
-    0% { transform: translate(-100%, 0); }
-    100% { transform: translate(0, 0); }
+@keyframes scrollText {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
 }
 
 @keyframes fadeUp {
@@ -123,7 +159,6 @@ header {
 .hamburger span:nth-child(2) { top: 9px; }
 .hamburger span:nth-child(3) { top: 18px; }
 
-/* Active State for Hamburger */
 .hamburger.active span:nth-child(1) { transform: rotate(45deg); top: 9px; background: var(--accent); }
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: rotate(-45deg); top: 9px; background: var(--accent); }
@@ -136,8 +171,8 @@ header {
     }
     .nav-links.active { transform: translateX(0); }
     .hamburger { display: block; }
-    .slide-text { font-size: 2.5rem; }
-    .slide-text-reverse { font-size: 1rem; }
+    .static-title { font-size: 3rem; }
+    .slide-text-gold { font-size: 1rem; }
 }
 
 /* --- 6. SECTIONS & CARDS --- */
