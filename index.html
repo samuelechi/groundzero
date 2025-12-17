@@ -12,25 +12,22 @@
     <header id="menu-bar"></header>
 
     <main>
-        <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1535063404286-a32050e32f5f?q=80&w=1920&auto=format&fit=crop'); position: relative;">
-            
-            <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(2, 41, 28, 0.7) 100%); z-index: 1;"></div>
-            
-            <div class="hero-content" style="z-index: 2; width: 100%; overflow: hidden;">
+        <section class="hero">
+            <div class="hero-content">
                 
                 <div class="hero-slider-container">
                     <h1 class="slide-text">GroundZero Engineering</h1>
                 </div>
                 
                 <div class="hero-slider-container">
-                    <h2 class="slide-text-reverse" style="color: #cfb53b; font-size: 1.5rem; font-weight: 600; letter-spacing: 2px;">
-                        Excellence in Design, Construction & Procurement • Oil & Gas Facilities • Structural Fabrication
+                    <h2 class="slide-text-reverse">
+                        Excellence in Design, Construction & Procurement • Oil & Gas Facilities
                     </h2>
                 </div>
 
                 <div style="margin-top: 60px; opacity: 0; animation: fadeUp 1s ease 1s forwards;">
-                    <a href="Project.html" class="btn-gold">View Our Work</a>
-                    <a href="#contact" style="color:white; border-bottom:1px solid #00d26a; margin-left:20px; padding-bottom: 5px; font-weight: 600; transition: 0.3s;">Get a Quote</a>
+                    <a href="Project.html" class="btn-gold" style="margin-right: 20px;">View Our Work</a>
+                    <a href="#contact" style="color:white; border-bottom:1px solid #00d26a; font-weight: 600;">Get a Quote</a>
                 </div>
             </div>
         </section>
@@ -42,9 +39,6 @@
                     <p style="margin-bottom: 20px;">
                         Ground Zero Engineering Ltd is a premier <strong>EPC (Engineering, Procurement, and Construction)</strong> company. We specialize in integrated environmental projects, particularly in mechanical, civil, and electrical engineering.
                     </p>
-                    <p>
-                        With expertise in metal and structural fabrications, we provide comprehensive design and construction services for <strong>oil and gas storage facilities</strong>, including both surface and underground tanks.
-                    </p>
                 </div>
                 <div>
                     <img src="Gpic2.jpeg" alt="Oil Storage Tank" style="border: 2px solid #00d26a; box-shadow: 0 0 20px rgba(0,210,106,0.2);">
@@ -52,20 +46,15 @@
             </div>
         </section>
 
-        <section style="background: linear-gradient(135deg, #0b1016 0%, #001f12 100%); border-top: 1px solid #333; border-bottom: 1px solid #333;">
+        <section style="background: linear-gradient(135deg, #0b1016 0%, #001f12 100%);">
             <div class="grid-2">
                 <div style="padding: 40px; border-left: 4px solid #00d26a; background: rgba(255,255,255,0.02);">
-                    <h3 style="color: #00d26a; font-size: 2.5rem; margin-bottom: 20px; text-transform: uppercase;">Our Mission</h3>
-                    <p style="color: #ffffff; font-size: 1.1rem; line-height: 1.8;">
-                        To deliver unparalleled quality in project execution for clients across Nigeria. We provide customized solutions tailored to each client's unique needs, utilizing cutting-edge equipment and highly skilled professionals. We aim to build lasting partnerships by consistently exceeding expectations.
-                    </p>
+                    <h3 style="color: #00d26a; font-size: 2rem; margin-bottom: 20px;">Our Mission</h3>
+                    <p style="color: #fff;">To deliver unparalleled quality in project execution for clients across Nigeria tailored to each client's unique needs.</p>
                 </div>
-
                 <div style="padding: 40px; border-left: 4px solid #cfb53b; background: rgba(255,255,255,0.02);">
-                    <h3 style="color: #cfb53b; font-size: 2.5rem; margin-bottom: 20px; text-transform: uppercase;">The Vision</h3>
-                    <p style="color: #ffffff; font-size: 1.1rem; line-height: 1.8;">
-                        To establish ourselves as the foremost leader in service delivery within the built environment of Nigeria. We aim to set the standard for excellence, driven by impeccable integrity and professionalism, contributing to the sustainable development of Nigeria’s infrastructure.
-                    </p>
+                    <h3 style="color: #cfb53b; font-size: 2rem; margin-bottom: 20px;">The Vision</h3>
+                    <p style="color: #fff;">To establish ourselves as the foremost leader in service delivery within the built environment of Nigeria.</p>
                 </div>
             </div>
         </section>
@@ -75,18 +64,18 @@
             <div class="grid-3">
                 <div class="card">
                     <img src="Gpic4.jpg" alt="Construction">
-                    <h3>High-Performance Construction</h3>
-                    <p>Building functional, safe, and sustainable structures that stand the test of time.</p>
+                    <h3>Construction</h3>
+                    <p>Building functional, safe, and sustainable structures.</p>
                 </div>
                 <div class="card">
                     <img src="Gpic1.jpeg" alt="Oil & Gas">
-                    <h3>Oil & Gas Storage</h3>
-                    <p>Specialized design and fabrication of surface and underground storage tanks.</p>
+                    <h3>Oil & Gas</h3>
+                    <p>Specialized design of surface and underground tanks.</p>
                 </div>
                 <div class="card">
-                    <img src="Gpic3.jpg" alt="Engineering">
+                    <img src="Gpic3.jpg" alt="Civil">
                     <h3>Civil Engineering</h3>
-                    <p>Foundation design, structural analysis, and comprehensive site preparation.</p>
+                    <p>Foundation design and structural analysis.</p>
                 </div>
             </div>
         </section>
@@ -102,7 +91,7 @@
                 <span style="cursor:pointer;" onclick="document.getElementById('chat-window').style.display='none'">✕</span>
             </div>
             <div id="chat-body" class="chat-body">
-                <div class="message bot-msg">Hello! Welcome to GroundZero. How can we help with your project?</div>
+                <div class="message bot-msg">Hello! Welcome to GroundZero. How can we help?</div>
             </div>
             <div class="chat-input-area">
                 <input type="text" id="chat-input" placeholder="Type a message...">
@@ -114,4 +103,3 @@
     <script src="MenuScript.js"></script>
 </body>
 </html>
-
